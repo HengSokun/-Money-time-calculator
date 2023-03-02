@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css'>
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body>
+
+
+    <!-- Menu -->
+    <div>
+        <div class="rounded grid border-1 justify-center text-slate-50 items-center relative w-screen  z-1">
+                
+            <div class="col-span-2 border-2 border-black rounded bg-black flex justify-center md:p-5">
+                <h1>Internet Payment</h1>
+            </div>
+
+            <!-- Start time -->
+            <div class="bg-gradient-to-r flex from-neutral-600 border-2 border-black rounded justify-center">
+                <div>
+                    <div id="start_time" class="flex p-5">
+                        <img src='https://img.icons8.com/fluency/28/null/play.png'/>
+                        <p class="text-white">
+                            Start:
+                        </p>
+                        <b id="from_time" class="text-cyan-700">
+                            0:00
+                        </b>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stopped time -->
+            <div class="bg-gradient-to-r from-teal-800 border-2 flex border-black rounded justify-center">
+                <div>
+                    <div id="stop_time" class="flex p-5">
+                        <img src="https://img.icons8.com/color/28/null/cancel--v1.png"/>
+                        <p class="text-white">
+                            Stop:
+                        </p>
+                        <b id="end_time" class="text-red-600">
+                            0:00
+                        </b>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Minute calculated -->
+            <div class=" bg-gradient-to-r from-sky-500 to-indigo-500 border-2 border-black rounded p-5 px-35 md:p-5 flex justify-center ">
+                <img src="https://img.icons8.com/fluency/28/null/delivery-time.png"/>
+                <div id="get_time" class="flex">
+                    <b id="minute_time" class="text-green-700">
+                        0
+                    </b>
+                    <p id="text_time" class="text-white">
+                        Minute(s):
+                    </p>
+                </div>
+            </div>
+
+            <!-- Money -->
+            <div class=" bg-gradient-to-r from-violet-500 to-fuchsia-500 border-2 border-black rounded p-5 px-35 flex justify-center">
+                
+                <img src="https://img.icons8.com/color/28/null/money-bag.png"/>
+                <div id="money_time" class="flex">
+                    <b id="amount_time" class="text-green-700">
+                        0
+                    </b>
+                    <p id="type_time" class="text-white">
+                        Riel(r):
+                    </p>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class=" border-2 border-black rounded bg-gradient-to-r from-cyan-500 to-blue-500 col-span-2 text-slate-50 flex justify-center p-1">
+                
+                <button class="rounded px-10 bg-yellow-500 p-3" id="start" onclick="button()"> Start </button>
+            </div>
+
+            <!-- Localtime -->
+            <div class= "bg-gradient-to-t from-sky-900 border-2 text-white border-black rounded col-span-2 flex justify-center p-5 px-35 md:p-5" bg-teal-600"  class="flex justify-around" >
+                <img src="https://img.icons8.com/nolan/30/time-span.png"/>
+                <div id="localtime" onclick="getCurrentTime()" ></div>
+            </div>
+        </div>
+    </div>
+    <!-- --------- -->
+
+
+    <!-- background animation -->
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+
+
+</body>
+</html>
